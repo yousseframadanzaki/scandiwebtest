@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "80:80"
+    depends_on:
+      - database
+    networks:
+      - mynetwork
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: scandi
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./scandi.sql:/docker-entrypoint-initdb.d/scandi.sql
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge

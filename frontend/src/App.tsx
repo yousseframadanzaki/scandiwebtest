@@ -40,7 +40,7 @@ function App() {
     <div>
       <Navbar title={"Products List"}>
           <Link className="px-6 py-2 text-white transition duration-500 ease-out bg-blue-700 rounded-lg hover:bg-blue-800 hover:ease-in hover:underline" to={"/add-product"}>ADD</Link>
-          <button onClick={handleMassDelete} className="px-6 py-2 text-black transition duration-700 ease-out bg-white border border-black rounded-lg hover:bg-red-500 hover:border-transparent hover:text-white  dark:bg-inherit dark:text-white dark:hover:bg-white dark:hover:text-black">
+          <button id='delete-product-button' onClick={handleMassDelete} className="px-6 py-2 text-black transition duration-700 ease-out bg-white border border-black rounded-lg hover:bg-red-500 hover:border-transparent hover:text-white  dark:bg-inherit dark:text-white dark:hover:bg-white dark:hover:text-black">
             MASS DELETE
           </button>
       </Navbar>

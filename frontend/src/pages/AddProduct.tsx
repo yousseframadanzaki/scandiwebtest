@@ -106,7 +106,7 @@ function AddProduct() {
                         <div className="relative">
                             <select onChange={(e) => setType(e.target.value)} name="type" id="productType" className={"form_input " + (errors?.type ? "!border-red-600" : "")}>
                                 <option value="">Please select type</option>
-                                <option value="dvd">Dvd</option>
+                                <option value="dvd">DVD</option>
                                 <option value="book">Book</option>
                                 <option value="furniture">Furniture</option>
                             </select>
